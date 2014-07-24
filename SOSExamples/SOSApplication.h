@@ -28,25 +28,21 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "ViewController.h"
-#import <SOS/SOS.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController ()
+@class SOSOptions;
 
-@end
+// This is a header file for an example SOS Application interface class.
+// Each target will have it's own implemenentation of this class. This is where the majority
+// of SOS specific code will live.
 
-@implementation ViewController
+/**
+ * A simple example of encapsulating SOS calls to make accessing SOS from many view controllers easier.
+ */
+@interface SOSApplication : NSObject
 
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-}
++ (SOSOptions *)getSessionOptions;
++ (void)setup;
++ (void)startSession;
 
 @end

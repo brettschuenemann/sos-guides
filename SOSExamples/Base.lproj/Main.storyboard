@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sxn-YL-Bhb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LQl-i4-B4f">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA0-dY-wNF">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA0-dY-wNF" customClass="SOSButton">
                                 <rect key="frame" x="48" y="249" width="225" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
@@ -75,9 +75,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Compose" id="297-Vg-ATT">
-                        <barButtonItem key="rightBarButtonItem" image="sos_button.png" id="RaK-hX-fAy"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Hm7-Lq-mxB">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fRd-5j-YRW" customClass="SOSButton">
+                                <rect key="frame" x="277" y="8" width="27" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sos_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgN-bP-rvi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,7 +142,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contacts" id="EwR-s8-4g1">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Dmc-nZ-mhj"/>
-                        <barButtonItem key="rightBarButtonItem" image="sos_button.png" id="eAN-O8-kZV"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9Jt-bc-FJk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XYW-0e-MQ6" customClass="SOSButton">
+                                <rect key="frame" x="277" y="8" width="27" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sos_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRg-yI-rlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,7 +209,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oIc-k1-Fjd">
-                        <barButtonItem key="rightBarButtonItem" image="sos_button.png" id="dRQ-5Q-Yo3"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="3ql-st-9PS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eYb-zW-f1L" customClass="SOSButton">
+                                <rect key="frame" x="277" y="8" width="27" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sos_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1032"/>
@@ -199,6 +225,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNP-VN-Ewt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1180" y="-552"/>
+        </scene>
+        <!--SOS Container-->
+        <scene sceneID="hUI-jz-tcH">
+            <objects>
+                <viewController id="LQl-i4-B4f" userLabel="SOS Container" customClass="SOSContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f8Z-cg-WLc"/>
+                        <viewControllerLayoutGuide type="bottom" id="nai-bg-Lk6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgE-eW-rx3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="sxn-YL-Bhb" kind="custom" identifier="SOS" customClass="SOSSegue" id="LIA-5u-D6m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YsB-sD-OFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="-728"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Quc-gd-ERi">

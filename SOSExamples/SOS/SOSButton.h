@@ -28,25 +28,13 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "ViewController.h"
-#import <SOS/SOS.h>
+#import <UIKit/UIKit.h>
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-}
-
+// This subclass is an easy way to wire in SOS into your application.
+// If you look at the Main.storyboard you will notice that buttons which trigger an SOS session
+// implement the SOSButton.
+//
+// This is a simple method to trigger SOS Sessions, with minimal code boilerplate, and allows you to manage your application
+// in the storyboard.
+@interface SOSButton : UIButton
 @end

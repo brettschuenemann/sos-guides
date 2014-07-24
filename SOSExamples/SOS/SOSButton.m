@@ -28,25 +28,15 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "ViewController.h"
+#import "SOSButton.h"
+#import "SOSApplication.h"
 #import <SOS/SOS.h>
 
-@interface ViewController ()
+@implementation SOSButton
 
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+  [super touchesEnded:touches withEvent:event];
+  [SOSApplication startSession];
 }
 
 @end

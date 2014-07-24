@@ -29,6 +29,7 @@
  */
 
 #import "AppDelegate.h"
+#import "SOSApplication.h"
 
 @implementation AppDelegate
 

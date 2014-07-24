@@ -28,25 +28,47 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "ViewController.h"
+#import "SOSApplication.h"
 #import <SOS/SOS.h>
 
-@interface ViewController ()
 
-@end
+@implementation SOSApplication
 
-@implementation ViewController
-
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+// Setup your SOS options here. For the purposes of this example we'll leave everything default.
+// Later examples will extend this functionality to customize SOS behavior.
++ (void)setup {
 }
 
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
++ (void)startSession {
+
+  SOSOptions *opts = [self getSessionOptions];
+  [[SOSSessionManager sharedInstance] startSessionWithOptions:opts completion:^(NSError *error, SOSSessionManager *sos) {
+    if (error) {
+
+      // Show the error.
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:[error localizedDescription]
+                                                     delegate:nil
+                                            cancelButtonTitle:@"Ok"
+                                            otherButtonTitles:nil];
+
+      [alert show];
+    }
+  }];
+}
+
+// Return an options object used to start an SOS session.
+// Be sure to replace the Account/Application information with your GoInstant Account/Application.
+// The email will also have to match a valid user account in your Service Cloud org.
++ (SOSOptions *)getSessionOptions {
+
+  // This settings object can be found in SOSExamples/Settings.plist
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"SOSSettings" ofType:@"plist"];
+  NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:path];
+
+  return [SOSOptions optionsWithAccount:settings[@"Account"]
+                            application:settings[@"Application"]
+                                  email:settings[@"Email"]];
 }
 
 @end
