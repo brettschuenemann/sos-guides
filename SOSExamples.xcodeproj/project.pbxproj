@@ -39,6 +39,18 @@
 		F2B1679A19816D3F00A91FC4 /* SOSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1679919816D3F00A91FC4 /* SOSButton.m */; };
 		F2B167A019817A2500A91FC4 /* SOSApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1679F19817A2500A91FC4 /* SOSApplication.m */; };
 		F2B167A41981934300A91FC4 /* SOSSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B167A31981934300A91FC4 /* SOSSettings.plist */; };
+		F2C0F1911982EA3500A2D678 /* SOSExampleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C0F1901982EA3500A2D678 /* SOSExampleAlert.xib */; };
+		F2C0F1921982EA3500A2D678 /* SOSExampleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C0F1901982EA3500A2D678 /* SOSExampleAlert.xib */; };
+		F2C0F1931982EA3500A2D678 /* SOSExampleAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C0F1901982EA3500A2D678 /* SOSExampleAlert.xib */; };
+		F2C0F1951982F24700A2D678 /* SOSExampleNotification.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C0F1941982F24700A2D678 /* SOSExampleNotification.xib */; };
+		F2C0F1961982F24700A2D678 /* SOSExampleNotification.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C0F1941982F24700A2D678 /* SOSExampleNotification.xib */; };
+		F2C0F1971982F24700A2D678 /* SOSExampleNotification.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C0F1941982F24700A2D678 /* SOSExampleNotification.xib */; };
+		F2C0F19A1982F61B00A2D678 /* SOSExampleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F1991982F61B00A2D678 /* SOSExampleAlert.m */; };
+		F2C0F19B1982F61B00A2D678 /* SOSExampleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F1991982F61B00A2D678 /* SOSExampleAlert.m */; };
+		F2C0F19C1982F61B00A2D678 /* SOSExampleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F1991982F61B00A2D678 /* SOSExampleAlert.m */; };
+		F2C0F19F1982F62F00A2D678 /* SOSExampleNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F19E1982F62F00A2D678 /* SOSExampleNotification.m */; };
+		F2C0F1A01982F62F00A2D678 /* SOSExampleNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F19E1982F62F00A2D678 /* SOSExampleNotification.m */; };
+		F2C0F1A11982F62F00A2D678 /* SOSExampleNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F19E1982F62F00A2D678 /* SOSExampleNotification.m */; };
 		F2F0D7A8198295EF00B14C39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F269BF0F198012E7001E69D7 /* ViewController.m */; };
 		F2F0D7A9198295EF00B14C39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F269BF09198012E7001E69D7 /* AppDelegate.m */; };
 		F2F0D7AA198295EF00B14C39 /* SOSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1679919816D3F00A91FC4 /* SOSButton.m */; };
@@ -147,7 +159,13 @@
 		F2B1679919816D3F00A91FC4 /* SOSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOSButton.m; path = SOS/SOSButton.m; sourceTree = "<group>"; };
 		F2B1679B19816D8C00A91FC4 /* SOSApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSApplication.h; sourceTree = "<group>"; };
 		F2B1679F19817A2500A91FC4 /* SOSApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOSApplication.m; path = "Guides/integrate-sos/SOSApplication.m"; sourceTree = "<group>"; };
-		F2B167A31981934300A91FC4 /* SOSSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SOSSettings.plist; sourceTree = "<group>"; };
+		F2B167A31981934300A91FC4 /* SOSSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SOSSettings.plist; path = SOSExamples/SOSSettings.plist; sourceTree = "<group>"; };
+		F2C0F1901982EA3500A2D678 /* SOSExampleAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SOSExampleAlert.xib; sourceTree = "<group>"; };
+		F2C0F1941982F24700A2D678 /* SOSExampleNotification.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SOSExampleNotification.xib; sourceTree = "<group>"; };
+		F2C0F1981982F61B00A2D678 /* SOSExampleAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOSExampleAlert.h; path = SOS/SOSExampleAlert.h; sourceTree = "<group>"; };
+		F2C0F1991982F61B00A2D678 /* SOSExampleAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOSExampleAlert.m; path = SOS/SOSExampleAlert.m; sourceTree = "<group>"; };
+		F2C0F19D1982F62F00A2D678 /* SOSExampleNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSExampleNotification.h; sourceTree = "<group>"; };
+		F2C0F19E1982F62F00A2D678 /* SOSExampleNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSExampleNotification.m; sourceTree = "<group>"; };
 		F2F0D7CE198295EF00B14C39 /* 2. Customize (Basic).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2. Customize (Basic).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F0D7F91982984F00B14C39 /* 3. Customize (Advanced).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3. Customize (Advanced).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F0D7FD19829B8400B14C39 /* SOSApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOSApplication.m; path = "Guides/customize-advanced/SOSApplication.m"; sourceTree = "<group>"; };
@@ -194,6 +212,7 @@
 		F269BEED198012E7001E69D7 = {
 			isa = PBXGroup;
 			children = (
+				F2B167A31981934300A91FC4 /* SOSSettings.plist */,
 				F2B1678D198139D000A91FC4 /* 1. Integrate SOS */,
 				F2F0D7FB198298F000B14C39 /* 2. Customize (Basic) */,
 				F2F0D7FC198298FA00B14C39 /* 3. Customize (Advanced) */,
@@ -235,11 +254,10 @@
 				F2B1678E19813B9200A91FC4 /* SOS */,
 				F269BF08198012E7001E69D7 /* AppDelegate.h */,
 				F269BF09198012E7001E69D7 /* AppDelegate.m */,
-				F269BF0B198012E7001E69D7 /* Main.storyboard */,
 				F269BF0E198012E7001E69D7 /* ViewController.h */,
 				F269BF0F198012E7001E69D7 /* ViewController.m */,
 				F269BF11198012E7001E69D7 /* Images.xcassets */,
-				F2B167A31981934300A91FC4 /* SOSSettings.plist */,
+				F269BF0B198012E7001E69D7 /* Main.storyboard */,
 			);
 			name = Common;
 			path = SOSExamples;
@@ -301,9 +319,15 @@
 		F2B1678E19813B9200A91FC4 /* SOS */ = {
 			isa = PBXGroup;
 			children = (
+				F2C0F1901982EA3500A2D678 /* SOSExampleAlert.xib */,
+				F2C0F1941982F24700A2D678 /* SOSExampleNotification.xib */,
 				F2B1679819816D3F00A91FC4 /* SOSButton.h */,
 				F2B1679919816D3F00A91FC4 /* SOSButton.m */,
 				F2B1679B19816D8C00A91FC4 /* SOSApplication.h */,
+				F2C0F1981982F61B00A2D678 /* SOSExampleAlert.h */,
+				F2C0F1991982F61B00A2D678 /* SOSExampleAlert.m */,
+				F2C0F19D1982F62F00A2D678 /* SOSExampleNotification.h */,
+				F2C0F19E1982F62F00A2D678 /* SOSExampleNotification.m */,
 			);
 			name = SOS;
 			sourceTree = "<group>";
@@ -421,6 +445,7 @@
 				F269BF49198014A1001E69D7 /* Home.png in Resources */,
 				F269BF4D198014A1001E69D7 /* sos_button_large.png in Resources */,
 				F269BF12198012E7001E69D7 /* Images.xcassets in Resources */,
+				F2C0F1951982F24700A2D678 /* SOSExampleNotification.xib in Resources */,
 				F2B167A41981934300A91FC4 /* SOSSettings.plist in Resources */,
 				F269BF43198014A1001E69D7 /* compose_icon.png in Resources */,
 				F269BF4E198014A1001E69D7 /* sos_button_large@2x.png in Resources */,
@@ -428,6 +453,7 @@
 				F269BF47198014A1001E69D7 /* contact_profile.png in Resources */,
 				F269BF46198014A1001E69D7 /* contact_icon@2x.png in Resources */,
 				F269BF44198014A1001E69D7 /* compose_icon@2x.png in Resources */,
+				F2C0F1911982EA3500A2D678 /* SOSExampleAlert.xib in Resources */,
 				F269BF4F198014A1001E69D7 /* sos_button.png in Resources */,
 				F269BF4A198014A1001E69D7 /* Home@2x.png in Resources */,
 				F269BF50198014A1001E69D7 /* sos_button@2x.png in Resources */,
@@ -450,6 +476,7 @@
 				F2F0D7B4198295EF00B14C39 /* Home.png in Resources */,
 				F2F0D7B5198295EF00B14C39 /* sos_button_large.png in Resources */,
 				F2F0D7B6198295EF00B14C39 /* Images.xcassets in Resources */,
+				F2C0F1961982F24700A2D678 /* SOSExampleNotification.xib in Resources */,
 				F2F0D7B7198295EF00B14C39 /* SOSSettings.plist in Resources */,
 				F2F0D7B8198295EF00B14C39 /* compose_icon.png in Resources */,
 				F2F0D7B9198295EF00B14C39 /* sos_button_large@2x.png in Resources */,
@@ -457,6 +484,7 @@
 				F2F0D7BB198295EF00B14C39 /* contact_profile.png in Resources */,
 				F2F0D7BC198295EF00B14C39 /* contact_icon@2x.png in Resources */,
 				F2F0D7BD198295EF00B14C39 /* compose_icon@2x.png in Resources */,
+				F2C0F1921982EA3500A2D678 /* SOSExampleAlert.xib in Resources */,
 				F2F0D7BE198295EF00B14C39 /* sos_button.png in Resources */,
 				F2F0D7BF198295EF00B14C39 /* Home@2x.png in Resources */,
 				F2F0D7C0198295EF00B14C39 /* sos_button@2x.png in Resources */,
@@ -479,6 +507,7 @@
 				F2F0D7DF1982984F00B14C39 /* Home.png in Resources */,
 				F2F0D7E01982984F00B14C39 /* sos_button_large.png in Resources */,
 				F2F0D7E11982984F00B14C39 /* Images.xcassets in Resources */,
+				F2C0F1971982F24700A2D678 /* SOSExampleNotification.xib in Resources */,
 				F2F0D7E21982984F00B14C39 /* SOSSettings.plist in Resources */,
 				F2F0D7E31982984F00B14C39 /* compose_icon.png in Resources */,
 				F2F0D7E41982984F00B14C39 /* sos_button_large@2x.png in Resources */,
@@ -486,6 +515,7 @@
 				F2F0D7E61982984F00B14C39 /* contact_profile.png in Resources */,
 				F2F0D7E71982984F00B14C39 /* contact_icon@2x.png in Resources */,
 				F2F0D7E81982984F00B14C39 /* compose_icon@2x.png in Resources */,
+				F2C0F1931982EA3500A2D678 /* SOSExampleAlert.xib in Resources */,
 				F2F0D7E91982984F00B14C39 /* sos_button.png in Resources */,
 				F2F0D7EA1982984F00B14C39 /* Home@2x.png in Resources */,
 				F2F0D7EB1982984F00B14C39 /* sos_button@2x.png in Resources */,
@@ -601,11 +631,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C0F19F1982F62F00A2D678 /* SOSExampleNotification.m in Sources */,
 				F269BF10198012E7001E69D7 /* ViewController.m in Sources */,
 				F269BF0A198012E7001E69D7 /* AppDelegate.m in Sources */,
 				F2B1679A19816D3F00A91FC4 /* SOSButton.m in Sources */,
 				F269BF06198012E7001E69D7 /* main.m in Sources */,
 				F2B167A019817A2500A91FC4 /* SOSApplication.m in Sources */,
+				F2C0F19A1982F61B00A2D678 /* SOSExampleAlert.m in Sources */,
 				F269BF5619802C74001E69D7 /* ContactsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,11 +646,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C0F1A01982F62F00A2D678 /* SOSExampleNotification.m in Sources */,
 				F2F0D7A8198295EF00B14C39 /* ViewController.m in Sources */,
 				F2F0D7A9198295EF00B14C39 /* AppDelegate.m in Sources */,
 				F2F0D7AA198295EF00B14C39 /* SOSButton.m in Sources */,
 				F2F0D7AB198295EF00B14C39 /* main.m in Sources */,
 				F2F0D80019829B8E00B14C39 /* SOSApplication.m in Sources */,
+				F2C0F19B1982F61B00A2D678 /* SOSExampleAlert.m in Sources */,
 				F2F0D7AD198295EF00B14C39 /* ContactsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,11 +661,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C0F1A11982F62F00A2D678 /* SOSExampleNotification.m in Sources */,
 				F2F0D7D31982984F00B14C39 /* ViewController.m in Sources */,
 				F2F0D7D41982984F00B14C39 /* AppDelegate.m in Sources */,
 				F2F0D7D51982984F00B14C39 /* SOSButton.m in Sources */,
 				F2F0D7D61982984F00B14C39 /* main.m in Sources */,
 				F2F0D7FE19829B8400B14C39 /* SOSApplication.m in Sources */,
+				F2C0F19C1982F61B00A2D678 /* SOSExampleAlert.m in Sources */,
 				F2F0D7D81982984F00B14C39 /* ContactsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

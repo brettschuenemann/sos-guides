@@ -36,7 +36,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
   [super touchesEnded:touches withEvent:event];
-  [SOSApplication startSession];
+  [[SOSApplication sharedInstance] startSession];
 }
 
 @end

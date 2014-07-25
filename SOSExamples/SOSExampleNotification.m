@@ -28,17 +28,31 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "AppDelegate.h"
-#import "SOSApplication.h"
+#import "SOSExampleNotification.h"
 
-@implementation AppDelegate
+@implementation SOSExampleNotification
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  // Run the setup on our SOS Wrapper.
-  [[SOSApplication sharedInstance] setup];
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+      [_activity startAnimating];
+    }
+    return self;
+}
 
-  return YES;
+- (id)initWithCoder:(NSCoder *)aDecoder {
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    [_activity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    [_activity startAnimating];
+  }
+  return self;
+}
+
+- (void)showWithMessage:(NSString *)message {
+  [_lblMessage setText:message];
+  [_activity startAnimating];
+  [self setHidden:NO];
 }
 
 @end

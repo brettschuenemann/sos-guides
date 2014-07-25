@@ -28,17 +28,17 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "AppDelegate.h"
-#import "SOSApplication.h"
+#import <UIKit/UIKit.h>
 
-@implementation AppDelegate
+/**
+ *  Simple class which adds some UIAlert like behavior. This is meant to demonstrate custom skinning
+ *  of SOS. it is not intended as a complete replacement for UIAlert.
+ */
+@interface SOSExampleAlert : UIView
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  // Run the setup on our SOS Wrapper.
-  [[SOSApplication sharedInstance] setup];
+@property (weak, nonatomic) IBOutlet UILabel *lblAlertMessage;
+@property (weak, nonatomic) IBOutlet UIButton *btnOK;
 
-  return YES;
-}
+- (void)showWithMessage:(NSString *)message completion:(void(^)())block;
 
 @end

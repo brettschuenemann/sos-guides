@@ -41,8 +41,22 @@
  */
 @interface SOSApplication : NSObject
 
-+ (SOSOptions *)getSessionOptions;
-+ (void)setup;
-+ (void)startSession;
+- (SOSOptions *)getSessionOptions;
+
+/**
+ *  Provides a singleton instance to the SOS Application
+ */
++ (instancetype)sharedInstance;
+
+/**
+ *  Start a session
+ */
+- (void)startSession;
+
+/**
+ *  <#Description#>
+ */
+- (void)setup;
+
 
 @end

@@ -31,44 +31,84 @@
 #import "SOSApplication.h"
 #import <SOS/SOS.h>
 
-
+/**
+ *  In this guide you'll be setting up a basic implementation of SOS in our demo application.
+ *
+ *  There are a few things to note.
+ *  1. The majority of the application specific code will be common for all guides in this project.
+ *     You can find that code in the 'Common' group.
+ *  2. This class will be implemented separately for each guide (Target), but each guide builds on the
+ *     previous one so code will be moved, and in one place.
+ *  3. New code for each guide will be commented.
+ */
 @implementation SOSApplication
 
-// Setup your SOS options here. For the purposes of this example we'll leave everything default.
-// Later examples will extend this functionality to customize SOS behavior.
-+ (void)setup {
+/**
+ *  This method is called from application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions in the SOSExamples/AppDelegate.m file.
+ *  For our basic integration there's nothing to do here.
+ *
+ *  We will be adding more to this as we go.
+ */
+- (void)setup {
 }
 
-+ (void)startSession {
+/**
+ *  Simple class method which wraps starting an SOS session. Although SOSSessionManager is a singleton, there is some boilerplate code for starting
+ *  a session that you would have to repeat for any action which would trigger a session.
+ */
+- (void)startSession {
 
   SOSOptions *opts = [self getSessionOptions];
   [[SOSSessionManager sharedInstance] startSessionWithOptions:opts completion:^(NSError *error, SOSSessionManager *sos) {
+
+    // Simple error handling case.
+    // If any part of a session launch returns an error it will be available here.
+    // If you haven't changed the Account/Application names for example you will see an error here.
     if (error) {
 
-      // Show the error.
+      // Generate an alert
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                       message:[error localizedDescription]
                                                      delegate:nil
                                             cancelButtonTitle:@"Ok"
                                             otherButtonTitles:nil];
 
+      // Show the error.
       [alert show];
     }
   }];
 }
 
-// Return an options object used to start an SOS session.
-// Be sure to replace the Account/Application information with your GoInstant Account/Application.
-// The email will also have to match a valid user account in your Service Cloud org.
-+ (SOSOptions *)getSessionOptions {
 
-  // This settings object can be found in SOSExamples/Settings.plist
+/**
+ *  Simple way to generate an SOSOptions object to be consumed by a session.
+ *  In our simple case we will grab this information from the SOSSettings.plist
+ *
+ *  @return an SOSOptions instance to be consumed by an SOS Session.
+ */
+- (SOSOptions *)getSessionOptions {
+
   NSString *path = [[NSBundle mainBundle] pathForResource:@"SOSSettings" ofType:@"plist"];
   NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:path];
 
+  // NOTE: By default the valies in the SOSSettings.plist are not valid and will result in an error on session start.
+  // Be sure to change those to match the credentials provided to you.
   return [SOSOptions optionsWithAccount:settings[@"Account"]
                             application:settings[@"Application"]
                                   email:settings[@"Email"]];
+}
+
+#pragma mark - Singleton
+
++ (instancetype)sharedInstance {
+  static id instance;
+  static dispatch_once_t once;
+
+  dispatch_once(&once, ^{
+    instance = [[self alloc] init];
+  });
+
+  return instance;
 }
 
 @end

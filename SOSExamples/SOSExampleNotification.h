@@ -28,17 +28,13 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "AppDelegate.h"
-#import "SOSApplication.h"
+#import <UIKit/UIKit.h>
 
-@implementation AppDelegate
+@interface SOSExampleNotification : UIView
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  // Run the setup on our SOS Wrapper.
-  [[SOSApplication sharedInstance] setup];
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
+@property (weak, nonatomic) IBOutlet UILabel *lblMessage;
 
-  return YES;
-}
+- (void)showWithMessage:(NSString *)message;
 
 @end

@@ -28,17 +28,39 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "AppDelegate.h"
-#import "SOSApplication.h"
+#import "SOSExampleAlert.h"
 
-@implementation AppDelegate
+typedef void (^Completion)();
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+@implementation SOSExampleAlert {
+  Completion _block;
+}
+
+- (id)initWithFrame:(CGRect)frame
 {
-  // Run the setup on our SOS Wrapper.
-  [[SOSApplication sharedInstance] setup];
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
 
-  return YES;
+- (IBAction)clicked:(id)sender {
+}
+
+- (void)showWithMessage:(NSString *)message completion:(void (^)())block {
+  _block = block;
+  [_lblAlertMessage setText:message];
+  [self setHidden:NO];
+}
+
+- (IBAction)actionOK:(UIButton *)sender {
+  [self setHidden:YES];
+  [_lblAlertMessage setText:@""];
+  if (_block) {
+    _block();
+    _block = nil;
+  }
 }
 
 @end
