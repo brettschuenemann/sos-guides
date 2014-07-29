@@ -27,9 +27,8 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
-#import "SOSApplication.h"
 #import <SOS/SOS.h>
+#import "SOSApplication.h"
 
 #import "SOSExampleAlert.h"
 #import "SOSExampleNotification.h"
