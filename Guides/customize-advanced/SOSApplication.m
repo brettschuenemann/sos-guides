@@ -103,8 +103,11 @@
 
   [_alert setHidden:YES];
   [_notification setHidden:YES];
-  [_notification setUserInteractionEnabled:NO];
+  [_notification setUserInteractionEnabled:YES];
   [_alert setUserInteractionEnabled:YES];
+
+  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleNotificationTouch:)];
+  [_notification addGestureRecognizer:tap];
 
   // Step 3. Add this class to the delegates in SOSSessionManager
   [sos addDelegate:self];
@@ -131,13 +134,27 @@
   SOSSessionManager *sos = [SOSSessionManager sharedInstance];
   if ([sos state] != SOSSessionStateInactive) {
     // We're either connecting, or are in a session already.
+    // Ask the user if they want to stop
+    [self stopSession];
     return;
   }
 
   SOSOptions *opts = [self getSessionOptions];
-  [_alert showWithMessage:@"Starting SOS" completion:^{
-    // Instead of handling the completion block here we can opt to allow the delegate handler manage errors for us.
-    [sos startSessionWithOptions:opts];
+  [_alert showWithMessage:@"Do you wish to start an SOS Session?" completion:^(BOOL ok) {
+    if (ok) {
+      // Instead of handling the completion block here we can opt to allow the delegate handler manage errors for us.
+      [sos startSessionWithOptions:opts];
+    }
+  }];
+}
+
+- (void)stopSession {
+  // Ask the user if they want to stop
+  SOSSessionManager *sos = [SOSSessionManager sharedInstance];
+  [_alert showWithMessage:@"Do you wish to cancel the SOS Session?" completion:^(BOOL ok) {
+    if (ok) {
+      [sos stopSession];
+    }
   }];
 }
 
@@ -157,15 +174,26 @@
   // If the session has stopped or is fully active, hide the notification
   if (current == SOSSessionStateInactive || current == SOSSessionStateActive) {
     [_notification setHidden:YES];
+    return;
   }
 }
 
 - (void)sosDidStart:(SOSSessionManager *)sos {
-  [_notification showWithMessage:@"Initializing"];
+  [_notification showWithMessage:@"Initializing.."];
 }
 
 - (void)sosDidConnect:(SOSSessionManager *)sos {
-  [_notification showWithMessage:@"Waiting for an Agent"];
+  [_notification showWithMessage:@"Waiting for an Agent.."];
+}
+
+- (void)sosDidStop:(SOSSessionManager *)sos {
+  [_alert showWithMessage:@"SOS Session has ended." completion:nil];
+}
+
+#pragma mark - GestureRecognizers
+
+- (void)handleNotificationTouch:(UITapGestureRecognizer *)recognizer {
+  [self stopSession];
 }
 
 #pragma mark - Singleton

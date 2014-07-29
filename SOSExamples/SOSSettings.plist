@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Account</key>
-	<string>My-Account</string>
+	<string>MyAccount</string>
 	<key>Application</key>
-	<string>My-App</string>
+	<string>MyApplication</string>
 	<key>Email</key>
-	<string>email@example.com</string>
+	<string>test@example.com</string>
 </dict>
 </plist>

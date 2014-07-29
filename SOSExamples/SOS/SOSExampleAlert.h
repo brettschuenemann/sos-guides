@@ -38,7 +38,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblAlertMessage;
 @property (weak, nonatomic) IBOutlet UIButton *btnOK;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
 
-- (void)showWithMessage:(NSString *)message completion:(void(^)())block;
+- (void)showWithMessage:(NSString *)message completion:(void(^)(BOOL ok))block;
 
 @end

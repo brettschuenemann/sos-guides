@@ -50,6 +50,7 @@
 }
 
 - (void)showWithMessage:(NSString *)message {
+  [self setCenter:CGPointMake(160, 90)];
   [_lblMessage setText:message];
   [_activity startAnimating];
   [self setHidden:NO];

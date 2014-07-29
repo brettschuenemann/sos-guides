@@ -30,7 +30,7 @@
 
 #import "SOSExampleAlert.h"
 
-typedef void (^Completion)();
+typedef void (^Completion)(BOOL ok);
 
 @implementation SOSExampleAlert {
   Completion _block;
@@ -45,10 +45,7 @@ typedef void (^Completion)();
     return self;
 }
 
-- (IBAction)clicked:(id)sender {
-}
-
-- (void)showWithMessage:(NSString *)message completion:(void (^)())block {
+- (void)showWithMessage:(NSString *)message completion:(void (^)(BOOL ok))block {
   _block = block;
   [_lblAlertMessage setText:message];
   [self setHidden:NO];
@@ -58,7 +55,16 @@ typedef void (^Completion)();
   [self setHidden:YES];
   [_lblAlertMessage setText:@""];
   if (_block) {
-    _block();
+    _block(YES);
+    _block = nil;
+  }
+}
+
+- (IBAction)actionCancel:(id)sender {
+  [self setHidden:YES];
+  [_lblAlertMessage setText:@""];
+  if (_block) {
+    _block(NO);
     _block = nil;
   }
 }
