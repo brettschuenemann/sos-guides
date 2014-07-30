@@ -27,10 +27,8 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
-#import "SOSApplication.h"
 #import <SOS/SOS.h>
-
+#import "SOSApplication.h"
 
 /**
  *  In this guide we will be customizing some of the default SOS behavior.
@@ -60,6 +58,9 @@
 
   [components setConnectionRetryMessage:@"The user has been waiting in the queue, they will be asked to continue/quit here"];
   [components setConnectionTimedOutMessage:@"The session has gone unanswered too long, it has been automatically ended"];
+  
+  [annotations setLineWidth:18.f]; // this changes the width of the line drawn by the agent
+  [annotations setLineColor:[UIColor magentaColor]]; // this changes the color of the line drawn by the agent
 }
 
 /**

@@ -28,8 +28,8 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SOSApplication.h"
 #import <SOS/SOS.h>
+#import "SOSApplication.h"
 
 /**
  *  In this guide you'll be setting up a basic implementation of SOS in our demo application.
