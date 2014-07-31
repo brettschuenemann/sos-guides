@@ -1,4 +1,1 @@
-sos-guides
-==========
-
-[SOS Guide](SOS Examples-template.md)
+SOS Example Project Setup-template.md
