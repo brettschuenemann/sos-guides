@@ -5,8 +5,8 @@
 This guide assumes you have done the following from the __Prerequisites__ section of the SOS documentation landing page.
 
 1. Cocoapods is installed.
-2. The GoInstant pods-specs-public repository as been added to your cocoapods list of repositories.
-3. You have valid credentials for a Salesforce.com org, as well as the SOS(GoInstant) account/application information that was provided to you during the setup process.
+2. The SOS [pods-specs-public](https://github.com/goinstant/pods-specs-public) repository as been added to your cocoapods list of repositories.
+3. You have valid credentials for a Salesforce.com org, as well as the SOS account/application information that was provided to you during the setup process.
 
 ## Getting Started
 
@@ -25,8 +25,8 @@ This contains the information you will need to successfully start an SOS session
 
 This settings file contains several fields.
 
-* Account: `Corresponds to the SOS(GoInstant) account you have been provided`
-* Application: `Corresponds to the SOS(GoInstant) application you have been provided`
+* Account: `Corresponds to the SOS account you have been provided`
+* Application: `Corresponds to the SOS application you have been provided`
 * Email: `This must match a valid customer record in your Salesforce.com org.`
 
 __NOTE__: By default this settings file contains placeholder values.  If the credentials here are not valid when starting a session, you will see an error.
