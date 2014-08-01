@@ -416,6 +416,15 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = goinstant;
+				TargetAttributes = {
+					F269BEF5198012E7001E69D7 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = F269BEF1198012E7001E69D7 /* Build configuration list for PBXProject "SOSExamples" */;
 			compatibilityVersion = "Xcode 3.2";
