@@ -1,5 +1,5 @@
 # Your Podfile should contain the following:
-pod 'SOS', '0.4.7'
+pod 'SOS', '0.4.9'
 
 post_install do |installer_representation|
   installer_representation.project.targets.each do |target|
