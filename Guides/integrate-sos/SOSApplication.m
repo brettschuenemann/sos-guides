@@ -31,6 +31,7 @@
 #import <SOS/SOS.h>
 #import "SOSApplication.h"
 
+
 /**
  *  In this guide you'll be setting up a basic implementation of SOS in our demo application.
  *
@@ -93,9 +94,10 @@
 
   // NOTE: By default the valies in the SOSSettings.plist are not valid and will result in an error on session start.
   // Be sure to change those to match the credentials provided to you.
-  return [SOSOptions optionsWithAccount:settings[@"Account"]
-                            application:settings[@"Application"]
-                                  email:settings[@"Email"]];
+  return [SOSOptions optionsWithEmail:settings[@"Email"]
+                         liveAgentPod:settings[@"Live Agent Pod"]
+                                orgId:settings[@"Salesforce Orginization ID"]
+                         deploymentId:settings[@"Deployment ID"]];
 }
 
 #pragma mark - Singleton

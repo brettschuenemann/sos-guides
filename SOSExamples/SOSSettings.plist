@@ -4,9 +4,15 @@
 <dict>
 	<key>Account</key>
 	<string>MyAccount</string>
-	<key>Application</key>
-	<string>MyApplication</string>
-	<key>Email</key>
-	<string>test@example.com</string>
+  <key>Application</key>
+  <string>MyApplication</string>
+  <key>Email</key>
+  <string>test@example.com</string>
+  <key>Salesforce Orginization ID</key>
+  <string>afakeorgid-1234</string>
+  <key>Live Agent Pod</key>
+  <string>la-1.d.salesforce.com</string>
+  <key>Deployment ID</key>
+  <string>afakedeployment</string>
 </dict>
 </plist>
